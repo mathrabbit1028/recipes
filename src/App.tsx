@@ -1,16 +1,14 @@
-import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import RecipeList from "./components/RecipeList"
+import RecipeDetail from "./components/RecipeDetail"
 
-const App = () => {
-  const [count, setCount] = useState(0);
-
+export default function App() {
   return (
-    <div>
-      <p>Hello World!</p>
-      <button onClick={() => setCount((count) => count + 1)}>
-        Count is {count}
-      </button>
-    </div>
-  );
-};
-
-export default App;
+    <Router>
+      <Routes>
+        <Route path="/" element={<RecipeList />} />
+        <Route path="/recipe/:id" element={<RecipeDetail />} />
+      </Routes>
+    </Router>
+  )
+}

@@ -13,8 +13,11 @@
     "check-all": "yarn check:types && yarn check:format && yarn check:unused"
   },
   "dependencies": {
+    "@types/react-router-dom": "^5.3.3",
+    "lucide-react": "^0.544.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.9.3"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
